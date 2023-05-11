@@ -21,9 +21,9 @@ class Role(models.Model):
 class UserModel(models.Model):
     name = models.CharField(max_length=30, null=False, primary_key=True)
     city = models.CharField(max_length=40)
-    dept = models.ForeignKey(Department, on_delete=models.CASCADE)
-    role = models.ForeignKey(Role, on_delete=models.CASCADE)
+    dept_id = models.ForeignKey(Department, on_delete=models.CASCADE)
+    role_id = models.ForeignKey(Role, on_delete=models.CASCADE)
     salary = models.IntegerField()
 
     def __str__(self):
-        return "%s %s %s %s %s" % (self.name, self.city, self.dept, self.role, self.salary)
+        return "%s %s %s %s %s" % (self.name, self.city, self.dept_id, self.role_id, self.salary)
