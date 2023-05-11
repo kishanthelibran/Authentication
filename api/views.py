@@ -9,7 +9,7 @@ from django.http import HttpResponse
 
 
 class RegisterUser(APIView):
-    def get(self, request):
+    def post(self, request):
         name = request.data['name']
         city = request.data['city']
         salary = request.data['salary']

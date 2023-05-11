@@ -19,7 +19,7 @@ class Role(models.Model):
 
 
 class UserModel(models.Model):
-    name = models.CharField(max_length=30, null=False)
+    name = models.CharField(max_length=30, null=False, primary_key=True)
     city = models.CharField(max_length=40)
     dept = models.ForeignKey(Department, on_delete=models.CASCADE)
     role = models.ForeignKey(Role, on_delete=models.CASCADE)
