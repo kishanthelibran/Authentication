@@ -5,7 +5,6 @@ from django.db import models
 
 class Department(models.Model):
     dept = models.CharField(max_length=30, null=False)
-    location = models.CharField(max_length=30)
 
     def __str__(self):
         return self.dept
