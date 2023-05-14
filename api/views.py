@@ -30,7 +30,7 @@ def RegisterUser(request):
                      dept_id=dept, role_id=role, salary=salary)
     user.save()'''
 
-    return Response(serializers.data)
+    return Response("Data successfully entered")
 
 
 @api_view(['POST'])
