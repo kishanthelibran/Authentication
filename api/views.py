@@ -7,6 +7,7 @@ from .models import UserModel
 from django.http import HttpResponse
 from django.core import serializers
 from .serializer import UserSerializer
+from rest_framework import status
 
 # Create your views here.
 
