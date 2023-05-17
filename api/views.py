@@ -21,15 +21,6 @@ def RegisterUser(request):
     serializers.is_valid(raise_exception=True)
     serializers.save()
 
-    '''name = request.data['name']
-    city = request.data['city']
-    salary = request.data['salary']
-    dept = request.data['dept']
-    role = request.data['role']
-    user = UserModel(name=name, city=city,
-                     dept_id=dept, role_id=role, salary=salary)
-    user.save()'''
-
     return Response("successfully entered")
 
 
